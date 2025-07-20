@@ -10,7 +10,7 @@ INSTALL_DIR="${HOME}/.bun"
 
 # 架构和平台检测
 ARCH=$(uname -m)
-if [[ "$ARCH" == "x86_64" ]]; then ARCH="x64"; elif [[ "$ARCH" == "aarch64" ]]; then ARCH="arm64"; else echo "Unsupported arch"; exit 1; fi
+if [[ "$ARCH" == "x86_64" ]]; then ARCH="x64"; elif [[ "$ARCH" == "aarch64" || "$ARCH" == "arm64" ]]; then ARCH="arm64"; else echo "Unsupported arch"; exit 1; fi
 
 OS=$(uname)
 if [[ "$OS" == "Linux" ]]; then OS="linux"; elif [[ "$OS" == "Darwin" ]]; then OS="darwin"; else echo "Unsupported OS"; exit 1; fi
