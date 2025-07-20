@@ -16,8 +16,8 @@ OS=$(uname)
 if [[ "$OS" == "Linux" ]]; then OS="linux"; elif [[ "$OS" == "Darwin" ]]; then OS="darwin"; else echo "Unsupported OS"; exit 1; fi
 
 FILE="bun-${OS}-${ARCH}.zip"
-URL="https://ghproxy.com/https://github.com/oven-sh/bun/releases/download/${LATEST}/${FILE}"
-
+#URL="https://ghproxy.com/https://github.com/oven-sh/bun/releases/download/${LATEST}/${FILE}"
+URL="https://github.com/oven-sh/bun/releases/download/${LATEST}/${FILE}"
 echo "Downloading from: $URL"
 mkdir -p "$INSTALL_DIR" && cd "$INSTALL_DIR"
 
